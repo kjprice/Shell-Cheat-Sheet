@@ -36,3 +36,34 @@ head -n 10 filename.txt # Prints top 10 lines of file
 tail -n 10 filename.txt # Prints bottom 10 lines of file
 tail -f filename.txt # Prints end of file and continuously prints any new additions to file
 ```
+
+## Hardware
+How much memory exists and is available
+```
+free -h
+```
+
+How much storage exists and is available
+```
+df -h
+```
+
+Summary of CPU stats
+```
+lscpu
+```
+
+Checks the load on CPU
+```
+top d1
+```
+
+#### Hardware stats file locations
+
+Some devices have files which include stats of hardware:
+
+```
+cat /proc/meminfo # displays details about the memory.
+cat /proc/partitions # reveals the size and number of partitions on your SD card or HDD.
+cat /proc/version # shows you which version you are using.
+```
