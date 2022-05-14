@@ -58,6 +58,11 @@ Checks the load on CPU
 top d1
 ```
 
+Check temperature of device (Raspberry Pi)
+```
+vcgencmd measure_temp
+```
+
 #### Hardware stats file locations
 
 Some devices have files which include stats of hardware:
@@ -66,4 +71,16 @@ Some devices have files which include stats of hardware:
 cat /proc/meminfo # displays details about the memory.
 cat /proc/partitions # reveals the size and number of partitions on your SD card or HDD.
 cat /proc/version # shows you which version you are using.
+```
+
+## Processes
+
+Show all processes running in the background
+```
+ps aux
+```
+
+List process(es) listening to port 9999
+```
+lsof -i :9999
 ```
