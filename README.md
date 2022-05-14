@@ -32,4 +32,7 @@ cat > filename.txt # Allows you to type anything you want and then hit "ctrl+D" 
 cat filename.txt # Prints entire contents of file to the screen
 more filename.txt # Provides VIM-like viewer to read file
 less filename.txt # Like "more" but allows you to go backwards
+head -n 10 filename.txt # Prints top 10 lines of file
+tail -n 10 filename.txt # Prints bottom 10 lines of file
+tail -f filename.txt # Prints end of file and continuously prints any new additions to file
 ```
