@@ -84,3 +84,23 @@ List process(es) listening to port 9999
 ```
 lsof -i :9999
 ```
+
+## Intermittent Connection Problems (SSH Console Blanking)
+
+See if `power save enabled` is outputed from running the following line:
+
+```sh
+dmesg
+```
+
+If so, then disable power save. Edit the config file `sudo nano /etc/rc.local`, and add the line:
+
+```sh
+setterm -blank 0 -powerdown 0 -powersave off || true
+```
+
+Additionally, you can verify if your machine is being throttled by running:
+
+```sh
+vcgencmd get_throttled
+```
