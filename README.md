@@ -96,7 +96,7 @@ dmesg
 If so, then disable power save. Edit the config file `sudo nano /etc/rc.local`, and add the line:
 
 ```sh
-setterm -blank 0 -powerdown 0 -powersave off || true
+sudo iw dev wlan0 set power_save off || true
 ```
 
 Additionally, you can verify if your machine is being throttled by running:
